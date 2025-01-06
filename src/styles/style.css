@@ -1,0 +1,317 @@
+:root {
+    --accent-color: rgba(33, 53, 85, .8);
+    --font-color: #F8FAFC;
+    --add-button-color: #FFDC7F;
+    --add-button-hover-color: #ffdd7fd2;
+    --delete-button-color: #F93827;
+    --delete-button-hover-color: #f93927cc;
+    --move-button-color: #16C47F;
+    --move-button-hover-color: #16c47ed1;
+    --archive-button-color: #FFD65A;
+    --archive-button-hover-color: #ffd65ace; 
+}
+
+* {
+    font-family: "Inclusive Sans", serif;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    box-sizing: border-box;
+    background-image: url('./images/background-image.jpg');
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    /* overflow: hidden; */
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+/* left side */
+
+.SideBar {
+    width: 35%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* Searchbar */
+
+.SideBar-item__searchbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: var(--accent-color);
+    padding: 30px;
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    /* -webkit-backdrop-filter: blur(19px); */
+    border: 1px solid rgba(33, 53, 85, .5);
+}
+
+.SideBar-item__searchbar h1 {
+    color: var(--font-color);
+    width: 100%;
+    text-align: left;
+    font-size: 4rem;
+}
+
+.SideBar-item__searchbar input {
+    width: 100%;
+    padding: 30px;
+    border-radius: 20px;
+    font-size: 2.5rem;
+}
+
+/* Searchbar */
+
+/* Add Note */
+
+.SideBar-item__featurenote {
+    width: 100%;
+    border-radius: 20px;
+    background-color: var(--accent-color);
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden; /* Hindari overflow blur */
+    
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    /* backdrop-filter: blur(10px); */
+    /* -webkit-backdrop-filter: blur(19px); */
+    border: 1px solid rgba(33, 53, 85, .5);
+}
+
+.SideBar-item__featurenote h1 {
+    font-size: 3.5rem;
+    width: 100%;
+    text-align: left;
+    color: var(--font-color);
+}
+
+.SideBar-item__featurenote form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.SideBar-item__featurenote_inputtitle {
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 2.5rem;
+}
+
+.SideBar-item__featurenote_inputdesc {
+    width: 100%;
+    height: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 2.5rem;
+}
+
+.SideBar-item__featurenote button {
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: var(--add-button-color);
+    transition: all .3s;
+}
+
+.SideBar-item__featurenote button:hover {
+    background-color: var(--add-button-hover-color);
+    cursor: pointer;
+}
+
+.SideBar-item__featurenote__counter {
+    font-size: 2rem;
+    color: var(--font-color);
+    text-align: left;
+    width: 100%;
+}
+
+/* Add Note */
+
+.note-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    gap: 30px;
+}
+
+/* left side */
+
+/* right side */
+
+.MainContent {
+    width: 65%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.MainContent::-webkit-scrollbar {
+    display: none;
+}
+
+/* active notes */
+
+.ActiveNotes {
+    width: 100%;
+    font-size: 2.5rem;
+    color: var(--font-color);
+}
+
+.ActiveNotes__message h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* active notes */
+
+/* archived notes */
+
+.ArchivedNotes {
+    width: 100%;
+    font-size: 2.5rem;
+    color: var(--font-color);
+}
+
+.ArchivedNotes__message h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* archived notes */
+
+/* notes list */
+
+.NoteList-list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 65px;
+}
+
+/* notes list */
+
+/* notes item */
+
+.NoteList-list_item {
+    width: 495px;
+    background-color: var(--accent-color);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.NoteList-list_item h1 {
+    width: 100%;
+    font-size: 3rem;
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.NoteList-list_item h1:hover {
+    overflow: visible;
+}
+
+.NoteList-list_item h2 {
+    border-top: 2px solid var(--font-color);
+    border-bottom: 2px solid var(--font-color);
+    color: var(--add-button-color);
+    font-size: 1.7rem;
+    padding: 20px 0;
+}
+
+.NoteList-list_item p {
+    width: 100%;
+    height: 290px;
+    font-size: 1.8rem;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.NoteList-list_item__button {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.note-item__delete {
+    border-radius: 0 0 0 15px;
+    background-color: var(--delete-button-color);
+    transition: all .3s;
+}
+
+.note-item__delete:hover {
+    cursor: pointer;
+    background-color: var(--delete-button-hover-color);
+}
+
+.note-item__move {
+    border-radius: 0 0 15px 0;
+    background-color: var(--move-button-color);
+    transition: all .3s;
+}
+
+.note-item__move:hover {
+    cursor: pointer;
+    background-color: var(--move-button-hover-color);
+}
+
+.note-item__archive {
+    border-radius: 0 0 15px 0;
+    background-color: var(--archive-button-color);
+    transition: all .3s;
+}
+
+.note-item__archive:hover {
+    cursor: pointer;
+    background-color: var(--archive-button-hover-color);
+}
+
+/* notes item */
+
+/* right side */
